@@ -5,166 +5,669 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Drycoin (DRY)</title>
 
+<meta name="description" content="Drycoin (DRY) - Build. Grow. Prosper.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#0b0f19;
-    color:#fff;
+
+background:#050505;
+color:white;
+overflow-x:hidden;
+
 }
 
-header{
-    text-align:center;
-    padding:80px 20px;
+body::before{
+
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#ffd70033;
+filter:blur(180px);
+top:-250px;
+left:-250px;
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#ffb70022;
+filter:blur(220px);
+right:-250px;
+bottom:-250px;
+z-index:-1;
+
+}
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,215,0,.15);
+z-index:1000;
+
 }
 
 .logo{
-    width:90px;
-    height:90px;
-    margin:auto;
-    border-radius:50%;
-    background:linear-gradient(135deg,#ffd54f,#f4b400);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
-    font-weight:bold;
-    color:#111;
-    box-shadow:0 0 25px gold;
+
+display:flex;
+align-items:center;
+gap:12px;
+
 }
 
-h1{
-    margin-top:20px;
-    font-size:42px;
-    color:#ffd54f;
+.logo svg{
+
+width:55px;
+height:55px;
+
 }
 
-p{
-    margin-top:10px;
-    color:#ccc;
+.logo h2{
+
+color:#FFD700;
+font-size:28px;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:35px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#FFD700;
+
+}
+
+.hero{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+color:#FFD700;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+max-width:750px;
+margin:auto;
+color:#ddd;
+line-height:1.8;
+
+}
+
+.buttons{
+
+margin-top:45px;
+
 }
 
 .btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 30px;
-    background:#ffd54f;
-    color:#111;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+
+display:inline-block;
+padding:15px 34px;
+margin:8px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+transition:.3s;
+
 }
 
-section{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
+.btn-primary{
+
+background:#FFD700;
+color:#111;
+
 }
 
-.card{
-    background:#151b2d;
-    padding:25px;
-    border-radius:12px;
-    margin-top:20px;
+.btn-primary:hover{
+
+transform:translateY(-4px);
+box-shadow:0 0 30px gold;
+
+}
+
+.btn-outline{
+
+border:2px solid gold;
+color:gold;
+
+}
+
+.btn-outline:hover{
+
+background:gold;
+color:black;
+
 }
 
 .stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:80px 10%;
+
 }
 
-.stat{
-    background:#151b2d;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
+.card{
+
+background:#101010;
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,215,0,.15);
+transition:.35s;
+
 }
 
-.stat h2{
-    color:#ffd54f;
+.card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(255,215,0,.25);
+
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#888;
+.card h2{
+
+font-size:40px;
+color:#FFD700;
+margin-bottom:10px;
+
 }
+
+.card p{
+
+color:#bbb;
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+.section-title{
+
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#FFD700;
+
+}
+
 </style>
-
 </head>
+
 <body>
 
-<header>
+<nav>
 
-<div class="logo">DRY</div>
+<div class="logo">
 
-<h1>DRYCOIN (DRY)</h1>
+<svg viewBox="0 0 200 200">
 
-<p>Build. Grow. Prosper.</p>
+<defs>
 
-<a href="#" class="btn">Whitepaper (Coming Soon)</a>
+<linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#FFF9C4"/>
+<stop offset="40%" stop-color="#FFD700"/>
+<stop offset="100%" stop-color="#C99700"/>
+</linearGradient>
 
-</header>
+</defs>
 
-<section>
+<circle cx="100" cy="100" r="90" fill="url(#gold)" stroke="#fff3a1" stroke-width="6"/>
 
-<h2>About</h2>
+<text x="100" y="122"
+font-size="80"
+font-weight="bold"
+text-anchor="middle"
+fill="#111">
 
-<div class="card">
-Drycoin (DRY) adalah token komunitas yang dibangun untuk mendukung pertumbuhan ekosistem digital dan inovasi blockchain.
+D
+
+</text>
+
+</svg>
+
+<h2>Drycoin</h2>
+
 </div>
 
-</section>
+<ul>
 
-<section>
+<li><a href="#">Home</a></li>
+<li><a href="#tokenomics">Tokenomics</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#community">Community</a></li>
 
-<h2>Statistics</h2>
+</ul>
 
-<div class="stats">
+</nav>
 
-<div class="stat">
-<h2>1B</h2>
+<section class="hero">
+
+<div>
+
+<h1>Drycoin (DRY)</h1>
+
+<p>
+
+The next generation community cryptocurrency focused on
+innovation, transparency, and long-term ecosystem growth.
+
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn btn-primary">
+
+Whitepaper
+
+</a>
+
+<a href="https://github.com/drycoin025/drycoin"
+class="btn btn-outline">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</section><!-- ===== STATISTICS ===== -->
+
+<section class="stats">
+
+<div class="card">
+<h2 id="holders">0</h2>
+<p>Community Holders</p>
+</div>
+
+<div class="card">
+<h2 id="supply">0</h2>
 <p>Total Supply</p>
 </div>
 
-<div class="stat">
-<h2>Gate Layer</h2>
-<p>Network</p>
+<div class="card">
+<h2 id="burn">0</h2>
+<p>Burn Rate</p>
 </div>
-
-<div class="stat">
-<h2>2025</h2>
-<p>Launch</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Roadmap</h2>
 
 <div class="card">
-✅ Website Launch<br><br>
-🔄 Community Growth<br><br>
-🔄 Exchange Listing<br><br>
-🔄 Ecosystem Expansion
+<h2 id="chain">Gate</h2>
+<p>Blockchain</p>
 </div>
 
 </section>
 
-<footer>
+<!-- ===== TOKENOMICS ===== -->
 
-© 2025 Drycoin (DRY)
+<section id="tokenomics">
+
+<h2 class="section-title">
+Tokenomics
+</h2>
+
+<div class="stats">
+
+<div class="card">
+<h2>40%</h2>
+<p>Community Rewards</p>
+</div>
+
+<div class="card">
+<h2>30%</h2>
+<p>Liquidity Pool</p>
+</div>
+
+<div class="card">
+<h2>20%</h2>
+<p>Development</p>
+</div>
+
+<div class="card">
+<h2>10%</h2>
+<p>Marketing</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== ROADMAP ===== -->
+
+<section id="roadmap">
+
+<h2 class="section-title">
+
+Roadmap
+
+</h2>
+
+<div class="card">
+
+<h2>Phase 1</h2>
+
+<p>
+
+✅ Website Launch<br>
+✅ Community Building<br>
+✅ Social Media Launch
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Phase 2</h2>
+
+<p>
+
+🚀 Token Launch<br>
+🚀 Liquidity Added<br>
+🚀 CoinMarketCap Listing
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Phase 3</h2>
+
+<p>
+
+🌎 Exchange Listing<br>
+🌎 Global Marketing<br>
+🌎 Ecosystem Expansion
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===== COMMUNITY ===== -->
+
+<section id="community">
+
+<h2 class="section-title">
+
+Join The Community
+
+</h2>
+
+<div class="stats">
+
+<div class="card">
+
+<h2>Telegram</h2>
+
+<p>
+
+Coming Soon
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>X (Twitter)</h2>
+
+<p>
+
+Coming Soon
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Discord</h2>
+
+<p>
+
+Coming Soon
+
+</p>
+
+</div>
+
+</div>
+
+    </section><footer>
+
+<h2 style="color:#FFD700;font-size:32px;margin-bottom:15px;">
+
+DRYCOIN
+
+</h2>
+
+<p style="color:#aaa;max-width:700px;margin:auto;line-height:1.8;">
+
+Build. Grow. Prosper.
+
+Drycoin is a community-driven digital asset focused on creating
+a transparent and sustainable blockchain ecosystem.
+
+</p>
+
+<p style="margin-top:40px;color:#666;">
+
+© 2025 Drycoin (DRY). All Rights Reserved.
+
+</p>
 
 </footer>
 
+<style>
+
+footer{
+
+padding:100px 20px;
+text-align:center;
+background:#080808;
+border-top:1px solid rgba(255,215,0,.15);
+
+}
+
+.fade{
+
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+.glow{
+
+animation:glow 3s infinite;
+
+}
+
+@keyframes glow{
+
+0%{
+
+text-shadow:0 0 10px gold;
+
+}
+
+50%{
+
+text-shadow:
+0 0 20px gold,
+0 0 40px gold;
+
+}
+
+100%{
+
+text-shadow:0 0 10px gold;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+nav{
+
+padding:15px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+function counter(id,end,suffix=""){
+
+let n=0;
+
+let speed=end/120;
+
+let obj=document.getElementById(id);
+
+let timer=setInterval(()=>{
+
+n+=speed;
+
+if(n>=end){
+
+n=end;
+
+clearInterval(timer);
+
+}
+
+obj.innerHTML=Math.floor(n).toLocaleString()+suffix;
+
+},20);
+
+}
+
+counter("holders",12850,"+");
+
+counter("supply",1000000000);
+
+counter("burn",15,"%");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.classList.add("fade");
+
+observer.observe(card);
+
+});
+
+document.querySelector("h1").classList.add("glow");
+
+</script>
+
 </body>
-</html>
+    </html>
